@@ -76,11 +76,6 @@ Each service is independently deployable and scalable.
 - Manage employee roles (e.g., manager, teller)
 - Remove an employee
 
-### Loan Management
-- Apply for a loan
-- View loan details
-- Make loan payments
-- View loan repayment schedule
 
 ### Feedback System
 - Submit feedback for banking services
@@ -149,11 +144,6 @@ Each service is independently deployable and scalable.
 - **GET** `/api/employees/{id}`: Get employee details
 - **PUT** `/api/employees/update/{id}`: Update employee info
 - **DELETE** `/api/employees/remove/{id}`: Remove an employee
-
-### Loan Management Service
-- **POST** `/api/loans/apply`: Apply for a loan
-- **GET** `/api/loans/{id}`: Get loan details
-- **PUT** `/api/loans/pay/{id}`: Make a loan payment
 
 ### Feedback Service
 - **POST** `/api/feedback/submit`: Submit feedback
