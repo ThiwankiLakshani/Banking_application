@@ -1,7 +1,13 @@
 
 # Banking Management System
 
-This is a **Banking Management System** project using a **React.js** frontend and **Spring Boot** backend. It comprises five services: **User Management**, **Account Management**, **Employee Management**, **Loan Management**, and **Feedback System**. Each service operates as a microservice to enhance scalability and maintainability.
+Here is the updated `README.md` file for your banking management system, now with both the **Transaction Service** and the **Employee Management System** included:
+
+---
+
+# Banking Management System
+
+This is a **Banking Management System** project using a **React.js** frontend and **Spring Boot** backend. It comprises six services: **User Management**, **Account Management**, **Employee Management**, **Transaction Management**, **Loan Management**, and **Feedback System**. Each service operates as a microservice to enhance scalability and maintainability.
 
 ## Table of Contents
 
@@ -12,6 +18,7 @@ This is a **Banking Management System** project using a **React.js** frontend an
   - [User Management](#user-management)
   - [Account Management](#account-management)
   - [Employee Management](#employee-management)
+  - [Transaction Management](#transaction-management)
   - [Loan Management](#loan-management)
   - [Feedback System](#feedback-system)
 - [Setup Instructions](#setup-instructions)
@@ -19,11 +26,11 @@ This is a **Banking Management System** project using a **React.js** frontend an
   - [Frontend Setup](#frontend-setup)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Project Overview
 
-The Banking Management System allows users to manage their bank accounts, apply for loans, manage employees, and provide feedback. The project follows a **microservice architecture**, with each service responsible for a different part of the system.
+The Banking Management System allows users to manage their bank accounts, perform transactions, manage employees, apply for loans, and provide feedback. The project follows a **microservice architecture**, with each service responsible for a different part of the system.
 
 ## Technologies Used
 
@@ -50,7 +57,8 @@ The system is composed of multiple microservices that communicate with each othe
 1. **User Management Service**: Manages user information and authentication.
 2. **Account Management Service**: Handles account creation and management.
 3. **Employee Management Service**: Manages employee records, roles, and assignments.
-4. **Feedback Service**: Collects and manages feedback from users.
+4. **Transaction Management Service**: Manages account transactions such as deposits, withdrawals, and transfers.
+5. **Feedback Service**: Collects and manages feedback from users.
 
 Each service is independently deployable and scalable.
 
@@ -75,56 +83,16 @@ Each service is independently deployable and scalable.
 - Manage employee roles (e.g., manager, teller)
 - Remove an employee
 
+### Transaction Management
+- Deposit money into an account
+- Withdraw money from an account
+- Transfer funds between accounts
+- View transaction history
 
 ### Feedback System
 - Submit feedback for banking services
 - View feedback history
 - Manage feedback responses (admin functionality)
-
-## Setup Instructions
-
-### Backend Setup
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-repo/banking-management-system-backend.git
-    cd banking-management-system-backend
-    ```
-
-2. Configure the database in `application.properties`:
-    ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/banking_system
-    spring.datasource.username=root
-    spring.datasource.password=yourpassword
-    ```
-
-3. Build the project:
-    ```bash
-    mvn clean install
-    ```
-
-4. Run the services:
-    ```bash
-    mvn spring-boot:run
-    ```
-
-### Frontend Setup
-
-1. Clone the frontend repository:
-    ```bash
-    git clone https://github.com/your-repo/banking-management-system-frontend.git
-    cd banking-management-system-frontend
-    ```
-
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
-
-3. Start the development server:
-    ```bash
-    npm start
-    ```
 
 ## API Endpoints
 
@@ -144,6 +112,13 @@ Each service is independently deployable and scalable.
 - **PUT** `/api/employees/update/{id}`: Update employee info
 - **DELETE** `/api/employees/remove/{id}`: Remove an employee
 
+### Transaction Management Service
+- **POST** `/api/transactions/deposit`: Deposit money
+- **POST** `/api/transactions/withdraw`: Withdraw money
+- **POST** `/api/transactions/transfer`: Transfer money
+- **GET** `/api/transactions/history/{accountId}`: Get transaction history
+
+
 ### Feedback Service
 - **POST** `/api/feedback/submit`: Submit feedback
 - **GET** `/api/feedback/all`: Get all feedback
@@ -151,5 +126,4 @@ Each service is independently deployable and scalable.
 ## Contributing
 
 Feel free to open issues or pull requests if you would like to contribute to this project. All contributions are welcome!
-
 
