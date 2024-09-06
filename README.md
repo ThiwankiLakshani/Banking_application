@@ -1,9 +1,4 @@
 
-# Banking Management System
-
-Here is the updated `README.md` file for your banking management system, now with both the **Transaction Service** and the **Employee Management System** included:
-
----
 
 # Banking Management System
 
