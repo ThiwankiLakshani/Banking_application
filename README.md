@@ -50,8 +50,7 @@ The system is composed of multiple microservices that communicate with each othe
 1. **User Management Service**: Manages user information and authentication.
 2. **Account Management Service**: Handles account creation and management.
 3. **Employee Management Service**: Manages employee records, roles, and assignments.
-4. **Loan Management Service**: Manages loan applications and repayments.
-5. **Feedback Service**: Collects and manages feedback from users.
+4. **Feedback Service**: Collects and manages feedback from users.
 
 Each service is independently deployable and scalable.
 
